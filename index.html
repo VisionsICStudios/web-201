@@ -1,161 +1,214 @@
-<!doctype html><!-- HTML5 Compliant -->
-<html lang="en">
-  <head>
-    <title>Dominic Wilson BioSite - Home Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Welcome To VisionICStudios Portfolio Website"/>
-    <meta name="keywords" content="Aaron Wilson, Web Developer, Portfolio, JavaScript, HTML, CSS, JQuery"/>
-    <meta name="author" content="Aaron R. Wilson"/>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"><!-- Google's equivelant to Menlo TT font -->
-    <link href="css/indexStyle.css" rel="stylesheet" type="text/css"/>
-  </head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome To VisionsICStudios Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->        
 
-  <body>
-    <main id="container">
-      <header>
-        <section class="logo">
-          <h1 id="logoTitle">THIS IS DOMINIC</h1>
+        <!-- BootStrap Navigation Begin -->
+        <header role="banner">
+            <nav id="navbar-primary" class="navbar" role="navigation">
+              <div class="container-fluid">
 
-          <div class="circle">
-            <img src="svg/dominicLogo.svg" alt="Logo of Dominic's head with text."/>
-          </div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#"><img id="logo-navbar-middle" src="svg/visionsicstudios.svg" width="200" alt="VisionsICStudios Logo"></a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </header><!-- header role="banner" --><!-- Navigation End -->
+
+        <!-- Main Content -->
+        <section class="main-content">
+
+            <!-- Intro Page Section -->
+            <section id="intro">
+
+                <!-- Bootstrap Modal Begin -->
+                <div id="splashModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="splashModalLabel" aria-hidden="true">
+
+                    <div class="modal-dialog">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 id="splashModalLabel" class="modal-title">Begin.</h1>
+                        </div><!-- header -->
+        
+                        <div class="modal-body">
+                            <a href="" class="logo-link"></a>
+                        </div>
+                    </div>
+                    </div>
+                </div><!-- Modal End -->
+            </section><!-- Section End -->
+
+
+
+            <!-- Home Page Begin -->
+            <section id="homePage"> 
+          
+                <!-- Start Slider Component -->
+                <article id="slider">
+                    <h1>
+                        <span>Welcome To VisionsIC</span>
+                    </h1>
+                    <input type="radio" name="slider" id="slide1" checked />
+                    <input type="radio" name="slider" id="slide2" />
+                    <input type="radio" name="slider" id="slide3" />
+                    <input type="radio" name="slider" id="slide4" />
+                    <input type="radio" name="slider" id="slide5" />
+
+
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <article>
+                                <img src="images/slide1.png" alt="image 1"/>
+                                </article>
+                                <article>
+                                <img src="images/slide2.png" alt="image 2"/>
+                                </article>
+                                <article>
+                                <img src="images/slide3.png" alt="image 3"/>
+                                </article>
+                                <article> 
+                                <img src="images/slide4.png" alt="image 4"/>
+                                </article>
+                                <article>
+                                <img src="images/slide5.png" alt="image 5"/>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="active">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                    </div>
+                </article><!-- End Slider Component -->
+            </section><!-- Home Page End -->
+            
+            <!-- About Page -->
+            <section id="aboutPage">
+                <div>
+                    <figure>
+                        <img src="images/about.png" alt="about picture" id="aboutImg">
+                        <figcaption>All the about info is found in this section</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <p>
+                        <strong>I, Aaron Robert Wilson, </strong> was born in Lower Merion, PA; of which is a suburb of Philadelphia. 
+                        I'm a digital immigrant, can remember the day my school opened it's first computer lab. To understand me, you 
+                        must first understand the background of the two beautiful human beings that brought me into this world. 
+                    </p>
+                    <br>
+                    <p>
+                        My mother, Loretta, comes from a hardworking Italian-American family. A family to where almost all the men 
+                        became construction workers.  It is fairly safe to say that my mother's side is of mechanically inclined people. 
+                        My father's side is comprised of almost all art-oriented people. My father passed away when I was 8 years old. 
+                        He was a published poet. My grand mom is still living at 93, an author, and has two books currently for sale on 
+                        Amazon. My uncle has been working on Broadway for almost 40 years. My Aunt is a theatrical actress, director, 
+                        and a columnist for a theatrical weblog. 
+                    </p>
+                    <br>
+                    <p>
+                        I can actually fully understand why it remains my ongoing passion to become a web developer. My brain is ingrained 
+                        with this awesome natural marriage of an art meets mechanical mindset. It's just naturally gravitates towards 
+                        technological art. Web development is my calling. 
+                    </p>
+                    <br>
+                    <p>
+                        Even though I currently work in healthcare, I know it is my destiny to become a web developer. I'll be the first 
+                        to admit that I'm raw, and I need to be guided in certain areas. On the technical side, I need work so that I can 
+                        understand how JavaScript works, PHP works, and so forth. Once, I do grasp it, look out, because I have a passion 
+                        inside to unleash on this world. I am very envious of the professional individuals that have this skillset. I look 
+                        up to them with respect, and want to develop that same knowledge they possess. 
+                    </p>
+                    <br>
+                </div>
+            
+            </section>
+  
+            <!-- Portfolio Page -->
+            <section id="portfolioPage">
+                <div>
+                    <figure>
+                      <img src="images/portfolio.png" alt="portfolio picture" id="portfolioImg">
+                      <figcaption>All the portfolio info is found in this section</figcaption>
+                    </figure>
+                  </div>
+                  <div>
+                    <p id="portfolioPara">
+                      Welcome to My Simple website's portfolio page. It is at this page where the information for all the
+                      latest news for this website will be displayed for everyone to see. I am just sitting here
+                      developing all the necessary text and content needed to create the appearance of a solid
+                      foundation of data for each web page.
+                    </p>
+                  </div>
+            </section>
+  
+            <!-- Contact Page -->
+            <section id="contactPage">
+  
+            </section>      
         </section>
 
-        <div class="quote">
-          <p>
-            <i>
-            "When I go to bed, I like to lay in Daddy's shirt, but lot's of times.. Daddy goes to work." - Dominic Wilson
-            </i>
-          </p>
-        </div>
-      </header>
 
-      <section id="navCenter">
-        <div id="imgScroll">
-          <nav id="scrollNav">
-            <ul class="scrollControls">
-              <li class="imgControl"><a href="" id="back"></a></li>
-              <li class="imgControl"><a href="" class="normal"></a></li>
-              <li class="imgControl"><a href="" class="normal"></a></li>
-              <li class="imgControl"><a href="" class="normal"></a></li>
-              <li class="imgControl"><a href="" class="normal"></a></li>
-              <li class="imgControl"><a href="" class="normal"></a></li>
-              <li class="imgControl"><a href="" id="advance"></a></li>
-            </ul>
-          </nav>
-        </div>
+        <!-- Bootstrap Footer Begin -->
+        <footer class="fixed-bottom bg-dark">
 
-        <nav id="mainNav">
-          <ul class="navLinks">
-            <li id="homeLink" class="selected"><h3>HOME</h3></li>
-            <li id="bioLink"><a href="bio.html"><h3>BIOGRAPHY</h3></a></li>
-            <li id="intLink"><a href="interests.html"><h3>INTERESTS</h3></a></li>
-            <li id="galleryLink"><a href="gallery.html"><h3>IMAGE GALLERY</h3></a></li>
-          </ul>
-        </nav>
-      </section>
+            <div class="footer-copyright text-white text-center py-3">© 2019 VisionsICStudios</div>
+        </footer>
 
-      <section id="infoBuckets">
-        <article class="buckets">
-          <img src="images/bioImg.jpg" class="images" alt="Dominic's biography header image."/>
-          <header class="headers">
-            <h2>DOMINIC’S BIOGRAPHY</h2>
-          </header>
+        <!-- JQuery -->  
+        <script>
+          // Optional code to hide all sections
+          $("#container > section").hide();
 
-          <p class="paragraphs">
-          In this section of Dominic's website, this is where viewers will read about a young boy who is
-          faced with learning challanges with his battle to overcome him being diagnosed as a child living
-          with ASD. For those viewers who don't know what ASD is, it is an acronym that means Autism Spectrum
-          Disorder. If you would like to read more of Dominic's biography, click below to read more.
-          </p>
+          // Create a pages Selector
+          let myPages = $("#homePage, #aboutPage, #newsPage, #contactPage");
 
-          <div class="buttons">
-            <a href="bio.html"><h3>READ HIS BIOGRAPHY</h3></a>
-          </div>
-        </article>
+          // Show chosen div, and hide all others
+          $("li a").onclick(function () {
+            $(myPages).hide();
+            $("#" + $(this).attr("class")).show();
+            $("#intro").hide();
+          });
+        </script>  
 
-        <article class="buckets">
-          <img src="images/interestsImg.jpg" class="images" alt="Dominic's interests header image."/>
-          <header class="headers">
-            <h2>DOMINIC’S INTERESTS</h2>
-          </header>
-
-          <p class="paragraphs">
-          Dominic is a young boy with a plethora of interests. One of his main interests is his love of
-          cars in general. But, his true passion is playing with Disney Pixar Cars die-cast metal 3/8
-          scale toy cars. Dominic's other interests include making videos on his iPad. At his young age of
-          just 5 years old, Dominic displays a natural ability with editing. Come see his interests.
-          </p>
-
-          <div class="buttons">
-            <a href="interests.html"><h3>READ HIS INTERESTS</h3></a>
-          </div>
-        </article>
-
-        <article class="buckets">
-          <img src="images/galleryImg.jpg" class="images" alt="Dominic's gallery header image."/>
-          <header class="headers">
-            <h2>DOMINIC’S IMAGES</h2>
-          </header>
-
-          <p class="paragraphs">
-          In this section of Dominic Wilson's bioSite, it is here were several candid photos and selfies of
-          Dominic can be seen. There are a lot of good action high quality digital photos of Dominic. For
-          example, seasonal shots of him in his toddler days playing in the snow in his winter jump suit, and
-          many more that everyone can be sure to check out in Dominic's photo gallery.
-          </p>
-
-          <div class="buttons">
-            <a href="gallery.html"><h3>SEE HIS IMAGES</h3></a>
-          </div>
-        </article>
-
-      </section>
-    </main>
-
-    <section class="footer">
-      <footer>
-        <nav id="footerNav">
-          <ul class="footLinks">
-            <li class="social">
-              <a href="https://www.facebook.com/dominic.wilson.56481" id="faceLink">
-                <h1 id="socialFace">
-                  <span></span>Facebook
-                </h1>
-              </a>
-            </li>
-
-            <li class="social">
-              <a href="https://twitter.com/Dominic70210010" id="twitLink">
-                <h1 id="socialTwit">
-                  <span></span>Twitter
-                </h1>
-              </a>
-            </li>
-
-            <li class="copyright">
-              <h6>Copyright 2018 ©</h6>
-            </li>
-
-            <li class="social">
-              <a href="https://plus.google.com/u/1/108123751934792026808" id="gooLink">
-                <h1 id="socialGoo">
-                  <span></span>Google+
-                </h1>
-              </a>
-            </li>
-
-            <li class="social">
-              <a href="https://www.pinterest.com/domicwilliamwilson/" id="pinLink">
-                <h1 id="socialPin">
-                  <span></span>Pinterest
-                </h1>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </section>
-  </body>
+        <script src="" async defer></script>
+    </body>
 </html>
