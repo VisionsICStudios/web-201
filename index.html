@@ -57,7 +57,7 @@
         </header><!-- header role="banner" --><!-- Navigation End -->
 
         <!-- Main Content -->
-        <section class="main-content">
+        <section class="container">
 
             <!-- Intro Page Section -->
             <section id="intro">
@@ -212,10 +212,10 @@
           // Create a pages Selector
           let myPages = $("#homePage, #aboutPage, #newsPage, #contactPage");
 
-          // Show chosen div, and hide all others
+          // Show chosen section, and hide all others
           $("li a").onclick(function () {
             $(myPages).hide();
-            $("#" + $(this).attr("class")).show();
+            $("#" + $(this).attr("id")).show();
             $("#intro").hide();
           });
         </script>
