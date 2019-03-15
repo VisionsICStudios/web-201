@@ -17,10 +17,9 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
         <!-- Bootstrap Links -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -29,32 +28,36 @@
         <![endif]-->
 
         <!-- BootStrap Navigation Begin -->
-        <header role="banner">
-            <nav id="navbar-primary" class="navbar" role="navigation">
-              <div class="container-fluid">
+        <nav class="navbar navbar-default" role="navigation">
 
+            <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <div class="navbar-brand navbar-brand-centered"><a href="#" id="homeBtn" class="homePage"><img src="svg/visionsicstudios.svg"></a></div>
                 </div>
 
-                <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#"><img id="logo-navbar-middle" src="svg/visionsicstudios.svg" width="200" alt="VisionsICStudios Logo"></a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                  </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-brand-centered">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" id="homeBtn" class="homePage">HOME</a></li>
+                        <li><a href="#" id="aboutBtn" class="aboutPage">ABOUT</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" id="portfolioBtn" class="portfolioPage">PORTFOLIO</a></li>
+                        <li><a href="#" id="contactBtn" class="contactPage">CONTACT</a></li>
+                    </ul>
                 </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
-        </header><!-- header role="banner" --><!-- Navigation End -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- Navigation End -->
 
         <!-- Main Content -->
         <section class="container">
