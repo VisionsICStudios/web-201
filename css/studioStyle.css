@@ -549,9 +549,9 @@ p#aboutP1 {
 }
 
 /* Portfolio Area */
-.picBlock {
+#ppDiv1 figure {
   position:relative;
-  top:10%;
+  margin-top:50px;
 }
 
 /* Contact Area */
