@@ -1,225 +1,310 @@
+<!--
+/*
+============================================
+; Title: wilsonA-assignment-4.4.html
+; Author: Aaron Wilson
+; Date:   12 March 2019
+; Description: JQuery Portfolio Website 
+;===========================================
+*/
+-->
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Welcome To VisionsICStudios Website</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <!-- JQuery Links -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VisionsICStudios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+    integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/studioStyle.css">
+</head>
 
-        <!-- Bootstrap Links -->
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- BootStrap Navigation Begin -->
-        <nav class="navbar navbar-default" role="navigation">
-
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <div class="navbar-brand navbar-brand-centered"><a href="#" id="homeBtn" class="homePage"><img src="svg/visionsicstudios.svg"></a></div>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-brand-centered">
-
-                    <ul class="nav navbar-nav">
-                        <li><a href="#" id="homeBtn" class="homePage">HOME</a></li>
-                        <li><a href="#" id="aboutBtn" class="aboutPage">ABOUT</a></li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" id="portfolioBtn" class="portfolioPage">PORTFOLIO</a></li>
-                        <li><a href="#" id="contactBtn" class="contactPage">CONTACT</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav><!-- Navigation End -->
-
-        <!-- Intro Page Section -->
-        <section id="intro">
-            <!-- Bootstrap Modal Begin -->
-            <div id="splashModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="splashModalLabel" aria-hidden="true">
-
-                <div class="modal-dialog">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h1 id="splashModalLabel" class="modal-title">Begin.</h1>
-                    </div><!-- header -->
-
-                    <div class="modal-body">
-                        <a href="#" class="homePage"><img src="svg/visionsicstudios.svg" id="modalLogo"></a>
-                    </div>
-                </div>
-                </div>
-            </div><!-- Modal End -->
-        </section><!-- Section End -->
-
-        <!-- Main Content -->
-        <section class="contents">
-
-            <!-- Home Page Begin -->
-            <section id="homePage">
-
-                <!-- Start Slider Component -->
-                <article id="slider">
-                    <h1>
-                        <span>Welcome To VisionsIC</span>
-                    </h1>
-                    <input type="radio" name="slider" id="slide1" checked />
-                    <input type="radio" name="slider" id="slide2" />
-                    <input type="radio" name="slider" id="slide3" />
-                    <input type="radio" name="slider" id="slide4" />
-                    <input type="radio" name="slider" id="slide5" />
+<body>
+    <header>
+        <section class="headNav">
+            <nav>
+              <ul>
+                <li class="navlinks">
+                  <a href="#" id="homeBtn" class="homePage">Home</a>
+                </li>
+                <li class="navlinks">
+                  <a href="#" id="aboutBtn" class="aboutPage">About</a>
+                </li>
 
 
-                    <div id="slides">
-                        <div id="overflow">
-                            <div class="inner">
-                                <article>
-                                <img src="images/slide1.png" alt="image 1"/>
-                                </article>
-                                <article>
-                                <img src="images/slide2.png" alt="image 2"/>
-                                </article>
-                                <article>
-                                <img src="images/slide3.png" alt="image 3"/>
-                                </article>
-                                <article>
-                                <img src="images/slide4.png" alt="image 4"/>
-                                </article>
-                                <article>
-                                <img src="images/slide5.png" alt="image 5"/>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
+                <li id="logo" class="navlinks">
+                    <a href="#" id="logoBtn" class="homePage">
+                        <img id="logoImg" src="svg/visionsicstudios.svg">
+                    </a>
+                </li>
 
 
-                    <div id="active">
-                        <label for="slide1"></label>
-                        <label for="slide2"></label>
-                        <label for="slide3"></label>
-                        <label for="slide4"></label>
-                        <label for="slide5"></label>
-                    </div>
-                </article><!-- End Slider Component -->
-            </section><!-- Home Page End -->
+                <li class="navlinks">
+                  <a href="#" id="portfolioBtn" class="portfolioPage">Portfolio</a>
+                </li>
+                <li class="navlinks">
+                  <a href="#" id="contactBtn" class="contactPage">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+    </header>
 
-            <!-- About Page -->
-            <section id="aboutPage">
-                <div>
-                    <figure>
-                        <img src="images/about.png" alt="about picture" id="aboutImg">
-                        <figcaption>All the about info is found in this section</figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <p>
-                        <strong>I, Aaron Robert Wilson, </strong> was born in Lower Merion, PA; of which is a suburb of Philadelphia.
-                        I'm a digital immigrant, can remember the day my school opened it's first computer lab. To understand me, you
-                        must first understand the background of the two beautiful human beings that brought me into this world.
-                    </p>
-                    <br>
-                    <p>
-                        My mother, Loretta, comes from a hardworking Italian-American family. A family to where almost all the men
-                        became construction workers.  It is fairly safe to say that my mother's side is of mechanically inclined people.
-                        My father's side is comprised of almost all art-oriented people. My father passed away when I was 8 years old.
-                        He was a published poet. My grand mom is still living at 93, an author, and has two books currently for sale on
-                        Amazon. My uncle has been working on Broadway for almost 40 years. My Aunt is a theatrical actress, director,
-                        and a columnist for a theatrical weblog.
-                    </p>
-                    <br>
-                    <p>
-                        I can actually fully understand why it remains my ongoing passion to become a web developer. My brain is ingrained
-                        with this awesome natural marriage of an art meets mechanical mindset. It's just naturally gravitates towards
-                        technological art. Web development is my calling.
-                    </p>
-                    <br>
-                    <p>
-                        Even though I currently work in healthcare, I know it is my destiny to become a web developer. I'll be the first
-                        to admit that I'm raw, and I need to be guided in certain areas. On the technical side, I need work so that I can
-                        understand how JavaScript works, PHP works, and so forth. Once, I do grasp it, look out, because I have a passion
-                        inside to unleash on this world. I am very envious of the professional individuals that have this skillset. I look
-                        up to them with respect, and want to develop that same knowledge they possess.
-                    </p>
-                    <br>
-                </div>
 
-            </section>
 
-            <!-- Portfolio Page -->
-            <section id="portfolioPage">
-                <div>
-                    <figure>
-                      <img src="images/portfolio.png" alt="portfolio picture" id="portfolioImg">
-                      <figcaption>All the portfolio info is found in this section</figcaption>
-                    </figure>
+
+  <section id="container">
+
+      <section id="introPage">
+          <!-- Bootstrap Modal Begin -->
+          <div id="splashModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="splashModalLabel" aria-hidden="true">
+
+              <div class="modal-dialog">
+
+              <div class="modal-content">
+
+                  <div class="modal-header">
+                      <h1 id="splashModalLabel" class="modal-title">Begin.</h1>
+                  </div><!-- header -->
+
+                  <div class="modal-body">
+                      <a href="#" class="homePage"><img id="logoIntro" src="svg/visionsicstudios.svg" id="modalLogo"></a>
                   </div>
-                  <div>
-                    <p id="portfolioPara">
-                      Welcome to My Simple website's portfolio page. It is at this page where the information for all the
-                      latest news for this website will be displayed for everyone to see. I am just sitting here
-                      developing all the necessary text and content needed to create the appearance of a solid
-                      foundation of data for each web page.
-                    </p>
+              </div>
+              </div>
+          </div><!-- Modal End -->
+      </section>
+      <section id="homePage">
+
+          <!-- Start Slider Component -->
+          <article id="slider">
+
+                  <input type="radio" name="slider" id="slide1" checked />
+                  <input type="radio" name="slider" id="slide2" />
+                  <input type="radio" name="slider" id="slide3" />
+                  <input type="radio" name="slider" id="slide4" />
+                  <input type="radio" name="slider" id="slide5" />
+              
+              <div id="slides">
+                  <div id="overflow">
+                      <div class="inner">
+                          <article class="slideImg" id="art1">
+                          <img src="images/slide1.png" alt="image 1" id="img1"/>
+                          </article >
+                          <article class="slideImg" id="art2">
+                          <img src="images/slide2.png" alt="image 2" id="img2"/>
+                          </article>
+                          <article class="slideImg" id="art3">
+                          <img src="images/slide3.png" alt="image 3" id="img3"/>
+                          </article>
+                          <article class="slideImg" id="art4">
+                          <img src="images/slide4.png" alt="image 4" id="img4"/>
+                          </article>
+                          <article class="slideImg" id="art5">
+                          <img src="images/slide5.png" alt="image 5" id="img5"/>
+                          </article>
+                      </div>
                   </div>
-            </section>
-
-            <!-- Contact Page -->
-            <section id="contactPage">
-
-            </section>
-        </section>
+              </div>
 
 
-        <!-- Bootstrap Footer Begin -->
-        <footer class="fixed-bottom bg-dark">
+              <div id="active">
+                  <label id="lbl1" for="slide1"></label>
+                  <label id="lbl2" for="slide2"></label>
+                  <label id="lbl3" for="slide3"></label>
+                  <label id="lbl4" for="slide4"></label>
+                  <label id="lbl5" for="slide5"></label>
+              </div>
+          </article><!-- End Slider Component -->
+      </section>
+      <section id="aboutPage">
+          <div>
+              <figure>
+                  <img src="images/about.png" alt="about picture" id="aboutImg">
+                  <figcaption>All the about info is found in this section</figcaption>
+              </figure>
+          </div>
+          <div>
+              <p id="aboutP1">
+                  <strong>I, Aaron Robert Wilson, </strong> was born in Lower Merion, PA; of which is a suburb of Philadelphia.
+                  I'm a digital immigrant, can remember the day my school opened it's first computer lab. To understand me, you
+                  must first understand the background of the two beautiful human beings that brought me into this world.
+              </p>
+              <br>
+              <p id="aboutP2">
+                  My mother, Loretta, comes from a hardworking Italian-American family. A family to where almost all the men
+                  became construction workers.  It is fairly safe to say that my mother's side is of mechanically inclined people.
+                  My father's side is comprised of almost all art-oriented people. My father passed away when I was 8 years old.
+                  He was a published poet. My grand mom is still living at 93, an author, and has two books currently for sale on
+                  Amazon. My uncle has been working on Broadway for almost 40 years. My Aunt is a theatrical actress, director,
+                  and a columnist for a theatrical weblog. </p>
+              <br>
+              <p id="aboutP3">
+                  I can actually fully understand why it remains my ongoing passion to become a web developer. My brain is ingrained
+                  with this awesome natural marriage of an art meets mechanical mindset. It's just naturally gravitates towards
+                  technological art. Web development is my calling.
+              </p>
+              <br>
+              <p id="aboutP4">
+                  Even though I currently work in healthcare, I know it is my destiny to become a web developer. I'll be the first
+                  to admit that I'm raw, and I need to be guided in certain areas. On the technical side, I need work so that I can
+                  understand how JavaScript works, PHP works, and so forth. Once, I do grasp it, look out, because I have a passion
+                  inside to unleash on this world. I am very envious of the professional individuals that have this skillset. I look
+                  up to them with respect, and want to develop that same knowledge they possess.
+              </p>
+              <br>
+          </div>
+      </section>
+      <section id="portfolioPage">
+          <div id="ppDivOne">
+              <figure>
+                  <a class="picBlock" id="pb1" href="https://visionsicstudios.github.io/bioSite/">
+                      <img class="portPic" src="images/" alt="portfolio picture one" id="portImg1">
+                      <figcaption>This is the link to the BioSite Page.</figcaption>
+                  </a>
+              </figure>
+              <figure>
+                  <a class="picBlock" id="pb2" href="https://github.com/VisionsICStudios/web-231">
+                      <img class="portPic" src="images/" alt="portfolio picture two" id="portImg2">
+                      <figcaption>This is the link to the WEB 231 Page.</figcaption>
+                  </a>
+              </figure>
+              <figure>
+                  <a class="picBlock" id="pb3" href="https://github.com/VisionsICStudios/web-330">
+                      <img class="portPic" src="images/" alt="portfolio picture three" id="portImg3">
+                      <figcaption>This is the link to the WEB 330 Page.</figcaption>
+                  </a>
+              </figure>
+              <figure>
+                  <a class="picBlock" id="pb4" href="https://visionsicstudios.github.io/">
+                      <img class="portPic" src="images/" alt="portfolio picture four" id="portImg4">
+                      <figcaption>This is the link to the WEB 200 Page.</figcaption>
+                  </a>
+              </figure>
+          </div>
 
-            <div class="footer-copyright text-white text-center py-3">© 2019 VisionsICStudios</div>
-        </footer>
+          <div id="ppDivTwo">
+              <article id="art1">
+                  <p>
+                    
+                  </p>
+              </article>
+              <article id="art2">
+                  <p>
+                    
+                  </p>
+              </article>
+              <article id="art3">
+                  <p>
+                    
+                  </p>
+              </article>
+              <article id="art4">
+                  <p>
+                    
+                  </p>
+              </article>
+          </div>
+      </section>
+      <section id="contactPage">
+          <div id="cpDiv1">
+              <figure>
 
-        <!-- JQuery -->
-        <script>
-          // Optional code to hide all sections
-          $(".contents > section").hide();
+                  <a class="icons" id="ico1">
+                      <span><i class="fa fa-phone-square"></i></span>  
+                  </a>
+                  <figcaption>Phone</figcaption>
+              </figure>
+              <figure>
 
-          // Create a pages Selector
-          let myPages = $("#homePage, #aboutPage, #portfolioPage, #contactPage");
+                  <a class="icons" id="ico2">
+                      <span><i class="fa fa-envelope-square"></i></span>
+                  </a>
+                  <figcaption>Email</figcaption>
+              </figure>
+          </div>
 
-          // Show chosen section, and hide all others
-          $("li a").onclick(function () {
-            $(myPages).hide();
-            $("#" + $(this).attr("class")).show();
-            $("#intro").hide();
-          });
-        </script>
+          <div id="cpDiv2">
+              <article id="artPhone">
+                  <p>
+                      This is section with the phone information.  
+                  </p>
+              </article>
+              <article id="artEmail">
+                  <p>
+                      This is section with the email information.   
+                  </p>
+              </article>
+          </div>
 
-        <script src="" async defer></script>
-    </body>
+      </section>
+  </section>
+
+  <script>
+
+    // I created all Jquery code here!
+
+    // Automatic JQuery Statement to let the DOM know is is ready.
+    $(document).ready(function() {
+
+      // Hide all other sections.
+      $("#homePage, #aboutPage, #portfolioPage, #contactPage, #spacer").hide();
+
+      // Run ths JQuery code when the home button is clicked.
+      $("#homeBtn").click(function () {
+        $("#homePage, #spacer").show();
+        $("#introPage, #aboutPage, #portfolioPage, #contactPage").hide();
+      });
+
+      // Run ths JQuery code when the about button is clicked.
+      $("#aboutBtn").click(function () {
+        $("#aboutPage").show();
+        $("#introPage, #homePage, #portfolioPage, #contactPage, #spacer").hide();
+      });
+
+      // Run ths JQuery code when the logo is clicked.
+      $("#logoBtn").click(function () {
+        $("#introPage").show();
+        $("#homePage, #aboutPage, #portfolioPage, #contactPage, #spacer").hide();
+      });
+
+      // Run ths JQuery code when the portfolio button is clicked.
+      $("#portfolioBtn").click(function () {
+        $("#portfolioPage").show();
+        $("#introPage, #homePage, #aboutPage, #contactPage, #spacer").hide();
+      });
+
+      // Run ths JQuery code when the contact button is clicked.
+      $("#contactBtn").click(function () {
+        $("#contactPage").show();
+        $("#introPage, #homePage, #aboutPage, #portfolioPage, #spacer").hide();
+      });
+    });
+  </script>
+
+
+<section id="footer">
+    <!-- Include Font Awesome Stylesheet in Header -->
+    <div id="spacer"></div>
+
+    <div class="footWrap">
+        <div class="text-center center-block">
+            <a href="https://www.facebook.com/AaronTinaWilson"><i id="social-fb" class="fab fa-facebook-square fa-3x social"></i></a>
+            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
+            <a href="https://github.com/VisionsICStudios"><i id="social-gh" class="fab fa-github-square fa-3x social"></i></a>
+            <a href="mailto:arwilson@my365.bellevue.edu"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+        </div>
+
+        <h6 id="copyright">&copy; 2019 VisionsICStudios</h6>
+    </div>
+</section>
+</body>
 </html>
