@@ -1,3 +1,12 @@
+/*
+============================================
+; Title: Portfolio.js
+; Author: Aaron Wilson
+; Date:   22 March 2019
+; Description: JQuery Code Portfolio Website
+;===========================================
+*/
+
 // I created all Jquery code here!
 
 // Automatic JQuery Statement to let the DOM know is is ready.
