@@ -7,6 +7,12 @@ $(document).ready(function() {
   $("#homePage, #aboutPage, #portfolioPage, #contactPage, .introCaption").hide();
 
   // Run ths JQuery code when the home button is clicked.
+  $(".homePage").click(function () {
+    $("#homePage").show();
+    $("#introPage, #aboutPage, #portfolioPage, #contactPage").hide();
+  });
+
+  // Run ths JQuery code when the home button is clicked.
   $("#homeBtn").click(function () {
     $("#homePage, #spacer").show();
     $("#introPage, #aboutPage, #portfolioPage, #contactPage").hide();
